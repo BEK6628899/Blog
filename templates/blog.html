@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/bootstrap-5.0.2-dist/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static '/css/blog.css' %}">
+    <title>Blog</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row navbar">
+            <div class="col-12 col-md-6 col-sm-6 navbar-icon"><a href="./bir.html">Ozodbek Blog</a></div>
+            <div class="col-12 col-md-6 col-sm-6 navbar-link">
+                <div><a href="/about/">About</a></div>
+                <div><a href="/blog/">Blog</a></div>
+                <div><a href="/">Home</a></div>
+            </div>
+        </div>
+        <div class="row blog">
+            <div class="col-12">
+                <h1 style="color:DarkOliveGreen;">Blog</h1>
+            </div>
+        </div>
+
+        <div class="row main">
+            {% for i in maqolalar %}
+            <div class="col-12 col-md-6 col-sm-6 main-card1">
+                <div class="main-card1-link">
+                    <p><h5>{{i.sana}}</h5></p>
+                    <a href="/maqola/{{i.id}}/"><h4>{{i.sarlavha}}</h4>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
+
+
+<!--            {% for i in maqola %}-->
+<!--            <div class="col-12 col-md-6 col-sm-6 main-card1">-->
+<!--                <p>{{i.sana}}</p>-->
+<!--                <div class="main-card1-link">-->
+<!--                    <a href="/maqola/{{i.id}}/">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            {% endfor %}-->
