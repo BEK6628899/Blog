@@ -9,3 +9,5 @@ urlpatterns = [
     path('blog/', blog, name='blog'),
     path('maqola/<int:son>/', maqola, name='maqola'),
 ]
+
+
